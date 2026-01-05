@@ -112,6 +112,7 @@ button:hover {
   width: 100%;
   overflow: hidden;
   border-radius: 20px;
+  touch-action: pan-y;
 }
 
 .slides {
@@ -158,9 +159,6 @@ button:hover {
   right: 10px;
 }
 
-.slider {
-  touch-action: pan-y;   /* allows vertical scroll, blocks horizontal conflict */
-}
 /* Footer */
 footer {
   margin-top: 40px;
