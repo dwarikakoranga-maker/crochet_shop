@@ -1,17 +1,30 @@
-body {
+/* ===== GLOBAL FIX FOR SCROLLING ===== */
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;   /* prevent horizontal scroll */
+  overflow-y: auto;     /* allow vertical scroll */
+  scroll-behavior: smooth;
+}
+
+/* ===== BODY ===== */
+body {
   font-family: 'Segoe UI', sans-serif;
   background: #fff8f2;
   color: #4a4a4a;
   text-align: center;
 }
 
-/* Hero Section */
+/* ===== HERO SECTION ===== */
 .hero {
   background: linear-gradient(135deg, #fbc2eb, #f9d423);
   padding: 60px 20px;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
+
+  /* IMPORTANT: do NOT lock height */
+  min-height: auto;
 }
 
 .hero h1 {
@@ -34,7 +47,7 @@ body {
   font-weight: bold;
 }
 
-/* Products */
+/* ===== PRODUCTS SECTION ===== */
 .products {
   padding: 50px 20px;
 }
@@ -43,10 +56,12 @@ body {
   margin-bottom: 40px;
 }
 
+/* ===== PRODUCT CARD ===== */
 .product-card {
   background: #ffffff;
   width: 260px;
   display: inline-block;
+  vertical-align: top;
   margin: 20px;
   padding: 20px;
   border-radius: 25px;
@@ -73,6 +88,7 @@ body {
   font-weight: bold;
 }
 
+/* ===== BUTTON ===== */
 button {
   margin-top: 15px;
   background: #25D366;
@@ -88,10 +104,21 @@ button:hover {
   background: #1ebe5d;
 }
 
-/* Footer */
+/* ===== FOOTER ===== */
 footer {
   margin-top: 40px;
   padding: 20px;
   font-size: 0.9rem;
 }
 
+/* ===== MOBILE FIX (VERY IMPORTANT) ===== */
+@media (max-width: 600px) {
+  .product-card {
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
