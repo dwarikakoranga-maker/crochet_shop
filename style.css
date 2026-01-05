@@ -155,6 +155,9 @@ button:hover {
   right: 10px;
 }
 
+.slider {
+  touch-action: pan-y;   /* allows vertical scroll, blocks horizontal conflict */
+}
 /* Footer */
 footer {
   margin-top: 40px;
