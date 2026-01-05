@@ -1,14 +1,16 @@
-/* General page settings */
 html, body {
   margin: 0;
-  padding: 0;
+  padding: 0; /* Added for consistency */
   font-family: 'Segoe UI', sans-serif;
   background: #fff8f2;
   color: #4a4a4a;
   text-align: center;
-  overflow-x: hidden;       /* prevent horizontal scroll */
-  overflow-y: auto;         /* enable vertical scroll */
-  scroll-behavior: smooth;  /* smooth scrolling */
+  min-height: 100vh; /* Ensures body takes at least full viewport height */
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* Helps with footer placement and overall flow */
 }
 
 /* Hero Section */
@@ -39,30 +41,26 @@ html, body {
   font-weight: bold;
 }
 
-/* Products Section */
+/* Products */
 .products {
-  display: flex;             /* use flexbox for layout */
-  flex-wrap: wrap;           /* wrap to next line if needed */
-  justify-content: center;   /* center the products */
   padding: 50px 20px;
-  gap: 20px;                 /* space between cards */
+  flex: 1; /* Allows this section to grow and push footer down */
 }
 
 .products h2 {
-  width: 100%;
   margin-bottom: 40px;
-  text-align: center;
 }
 
-/* Product Cards */
 .product-card {
   background: #ffffff;
-  width: 100%;               /* default: full width */
-  max-width: 350px;          /* maximum width on desktop */
+  width: 260px;
+  display: inline-block;
+  margin: 20px;
   padding: 20px;
   border-radius: 25px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.08);
   transition: transform 0.3s;
+  vertical-align: top; /* Prevents alignment issues with inline-block */
 }
 
 .product-card:hover {
@@ -101,19 +99,8 @@ button:hover {
 
 /* Footer */
 footer {
-  margin-top: 40px;
+  margin-top: 40px; /* Can keep or use auto if preferred */
   padding: 20px;
   font-size: 0.9rem;
-}
-
-/* RESPONSIVE: Mobile & small screens */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 2.2rem;
-  }
-
-  .product-card {
-    width: 90%;          /* almost full width on mobile */
-    max-width: none;     /* remove desktop max-width */
-  }
+  background: #f0f0f0; /* Optional: subtle background for footer */
 }
