@@ -6,7 +6,7 @@ buttons.forEach(button => {
     const message = `Hi! I’d love to order the ${product} 🧶💖`;
     
     window.open(
-      `https://wa.me/91XXXXXXXXXX?text=${encodeURIComponent(message)}`,
+      `https://wa.me/918266060636?text=${encodeURIComponent(message)}`,
       "_blank"
     );
   });
